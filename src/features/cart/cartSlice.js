@@ -28,9 +28,10 @@ const cartSlice = createSlice({
     removeFromCart({ products }, action) {
       const product = action.payload;
       const { sku } = product;
-      const quantity = products[sku]?.quantity ?? 0;
+      const quantity = products[sku].quantity;
 
-      products[sku].quantity = quantity >= 1 ? quantity - 1 : 0;
+      if (quantity > 1) products[sku].quantity = quantity - 1;
+      else delete products[sku];
     },
     clear() {
       return initialState;

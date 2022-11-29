@@ -7,7 +7,7 @@ const Layout = () => {
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Codezard POS
+            Code Sass POS
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="nav-items" />
           <Navbar.Collapse id="nav-items">
